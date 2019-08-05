@@ -1,11 +1,14 @@
 ## Config Vhost Project Laravel
 ### /etc/nginx/sites-available/test :
+server 
+{
 
-server {
-        listen 80;
+      listen 80;
+        
         root /var/www/html/test1;
+        
         index index.html index.htm index.php;
-
+        
         server_name www.test1.local test1.local;
 
         #location / {

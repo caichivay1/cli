@@ -1,5 +1,5 @@
 ## Config Vhost Project Laravel
-### /etc/nginx/sites-available/test :
+### /etc/nginx/sites-available/laravel :
 
       server 
       {
@@ -38,3 +38,15 @@
                      deny all;
               }
            }
+## Config Vhost Project Magento
+### /etc/nginx/sites-available/magento:
+     server {
+           listen 80;
+           server_name  craft.local;
+           set $MAGE_ROOT /var/www/html/craft;
+            set $MAGE_MODE developer;
+           include /var/www/html/craft/nginx.conf.sample;
+            error_log /var/www/log/crafts/error.log;
+       }
+ ## nginx.conf.sample
+ 

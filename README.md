@@ -1,6 +1,5 @@
-# cli
 ## Config Vhost Project Laravel
-**/etc/nginx/sites-available/test
+** /etc/nginx/sites-available/test
 server {
         listen 80;
 

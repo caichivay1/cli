@@ -75,7 +75,7 @@ server {
      auth_basic_user_file /home/administrator/.htpasswd;
 }
 #project/nginx.conf.sample
-add 
+      add 
       #fastcgi_param  MAGE_RUN_TYPE $MAGE_RUN_TYPE;
       #fastcgi_param  MAGE_RUN_CODE $MAGE_RUN_CODE;
                  location /media/downloadable/ {

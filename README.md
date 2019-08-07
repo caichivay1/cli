@@ -74,7 +74,9 @@
         set $MAGE_RUN_TYPE website; #or set $MAGE_RUN_TYPE store;
      auth_basic_user_file /home/administrator/.htpasswd;
 }
+
 #project/nginx.conf.sample
+
           `add 2 line below
             fastcgi_param  MAGE_RUN_TYPE $MAGE_RUN_TYPE;
             fastcgi_param  MAGE_RUN_CODE $MAGE_RUN_CODE;

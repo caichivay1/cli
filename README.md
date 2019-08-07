@@ -50,21 +50,21 @@
        }
  ## nginx.conf.sample
  ## setup multi website/store
-  #etc/nginx/sites-available/craft
-      upstream fastcgi_backend {
-     server  unix:/run/php/php7.2-fpm.sock;
-}
+        #etc/nginx/sites-available/craft
+            upstream fastcgi_backend {
+           server  unix:/run/php/php7.2-fpm.sock;
+      }
 
-map $http_host $MAGE_RUN_CODE {
-    #default '';
-    specialistcrafts-ie2.staging.screencommerce.com ireland;
-    specialistcrafts-ae2.staging.screencommerce.com uae;
-    specialistcrafts-world2.staging.screencommerce.com world;
-    sewingmachines2.staging.screencommerce.com sewing;
-    homecrafts2.staging.screencommerce.com home;
-    hearteducational2.staging.screencommerce.com heart;
-}
-server {
+      map $http_host $MAGE_RUN_CODE {
+          #default '';
+          specialistcrafts-ie2.staging.screencommerce.com ireland;
+          specialistcrafts-ae2.staging.screencommerce.com uae;
+          specialistcrafts-world2.staging.screencommerce.com world;
+          sewingmachines2.staging.screencommerce.com sewing;
+          homecrafts2.staging.screencommerce.com home;
+          hearteducational2.staging.screencommerce.com heart;
+      }
+      server {
 
      listen 80;
      server_name specialistcrafts2.staging.screencommerce.com specialistcrafts-ae2.staging.screencommerce.com specialistcrafts-world2.staging.screencommerce.com specialistcrafts-ie2.staging.screencommerce.com sewingmachines2.staging.screencommerce.com homecrafts2.staging.screencommerce.com hearteducational2.staging.screencommerce.com;
@@ -75,12 +75,12 @@ server {
      auth_basic_user_file /home/administrator/.htpasswd;
 }
 #project/nginx.conf.sample
-      add 
-      #fastcgi_param  MAGE_RUN_TYPE $MAGE_RUN_TYPE;
-      #fastcgi_param  MAGE_RUN_CODE $MAGE_RUN_CODE;
-                 location /media/downloadable/ {
-          deny all;
-      }
+            add 
+            #fastcgi_param  MAGE_RUN_TYPE $MAGE_RUN_TYPE;
+            #fastcgi_param  MAGE_RUN_CODE $MAGE_RUN_CODE;
+                       location /media/downloadable/ {
+                deny all;
+            }
 
       location /media/import/ {
           deny all;

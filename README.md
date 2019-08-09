@@ -133,6 +133,26 @@
       }
       try_files $uri $uri/ @magento;
       fastcgi_param SCRIPT_FILENAME $document_root/$fastcgi_script_name;
+      
+##Config and install magento 2
 
+      php bin/magento setup:install \
+        --admin-firstname=First \
+        --admin-lastname=Last \
+        --admin-email='email@example.com' \
+        --admin-user=admin \
+        --admin-password='ADMIN_PASSWORD' \
+        --base-url='http://localhost' \
+        --backend-frontname=admin \
+        --db-host='DB_HOST' \
+        --db-name='DB_NAME' \
+        --db-user='DB_USER' \
+        --db-password='DB_PASSWORD' \
+        --language=en_US \
+        --currency=USD \
+        --timezone='America/Chicago' \
+        --admin-use-security-key=0 \
+        --session-save=files
+      php bin/magento deploy:mode:set developer
 
  

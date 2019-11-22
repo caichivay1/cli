@@ -1,5 +1,6 @@
 ##Debug phpstom in cli
-debug cli XDEBUG_CONFIG=idekey=phpstorm bin/magento
+                  
+                  debug cli XDEBUG_CONFIG=idekey=phpstorm bin/magento
 ## Config Vhost Project Laravel
 ### /etc/nginx/sites-available/laravel :
 

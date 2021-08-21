@@ -56,6 +56,7 @@
         #etc/nginx/sites-available/craft
             upstream fastcgi_backend {
            server  unix:/run/php/php7.2-fpm.sock;
+           or server 127.0.0.1:9000 (on MAcos this is listen in /usr/local/etc/php/7.2/php-fpm.d/www.conf )
       }
 
       map $http_host $MAGE_RUN_CODE {

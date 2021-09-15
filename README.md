@@ -1,14 +1,14 @@
 ##Debug phpstom in cli
                   
                   debug cli XDEBUG_CONFIG=idekey=phpstorm bin/magento
-##Config fpm version , cli version
+## Config fpm version , cli version
       /usr/local/etc/php/7.4/php-fpm.d/www.conf
       line listen:
-      the listen in www.conf is port in nginx.conf
-      upstream fastcgi_backend {
-           server  unix:/run/php/php7.2-fpm.sock;
-           or server 127.0.0.1:9000 (on MAcos this is listen in /usr/local/etc/php/7.2/php-fpm.d/www.conf )
-      }
+      #the listen in www.conf is port in nginx.conf
+            upstream fastcgi_backend {
+                 server  unix:/run/php/php7.2-fpm.sock;
+                 or server 127.0.0.1:9000 (on MAcos this is listen in /usr/local/etc/php/7.2/php-fpm.d/www.conf )
+            }
 
 ## Config Vhost Project Laravel
 ### /etc/nginx/sites-available/laravel :
